@@ -36,11 +36,12 @@
         if (name === '' || password === '') {
             valid = false;
             message = "Credenciales erroneas"
+            alert(message)
         }
         if (name !== '' && password !== '') {
-          message = "Credenciales validos"
+          window.location.href = '/sesion.html'
         }
-        alert(message)
+        
       }
     </script>
   </body>
