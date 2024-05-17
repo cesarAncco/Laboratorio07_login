@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario con Bootstrap</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="mb-4">Iniciar Sesión</h2>
+      <form id="registroForm">
+          <div class="form-group">
+              <label for="nombre">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre">
+              <div id="nombreError" class="error"></div>
+          </div>
+          <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" class="form-control" id="password" placeholder="Introduce tu contraseña">
+              <div id="passwordError" class="error"></div>
+          </div>
+          <br />
+          <button type="button" onclick="validar()" class="btn btn-primary">Iniciar Sesion</button>
+      </form>
+    </div>
+
+    <script>
+      function validar() {
+        let message = ""
+        let validator = true;
+        const name = document.getElementById('nombre').value;
+        const password = document.getElementById('password').value;
+
+        if (name === '' || password === '') {
+            valid = false;
+            message = "Credenciales erroneas"
+        }
+        if (name !== '' && password !== '') {
+          message = "Credenciales validos"
+        }
+        alert(message)
+      }
+    </script>
+  </body>
+</html>
